@@ -1,0 +1,113 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #f0f2f5;
+    transition: background-color 0.5s ease, color 0.5s ease;
+    color: #000000;
+}
+
+.text-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: auto;
+    min-height: 200px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: none; 
+    box-sizing: border-box;
+    padding: 15px;
+}
+
+.textarea-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#sign-text {
+    width: 100%;
+    min-height: 100px;
+    padding: 0;
+    text-align: center;
+    overflow-y: hidden;
+    border: none;
+    outline: none;
+    line-height: 1; 
+    resize: none;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    color: inherit;
+    /* 0文字の時の見た目を修正 */
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+#controls {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+}
+
+.controls-hidden {
+    opacity: 0;
+    transform: translateX(-50%) translateY(20px);
+    pointer-events: none;
+}
+
+.color-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease;
+}
+
+.color-button:hover {
+    transform: scale(1.1);
+}
+
+.action-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    color: #000;
+    transition: transform 0.2s ease;
+}
+
+.action-button:hover {
+    transform: scale(1.1);
+}
+
+.color-button[data-color="#FFFFFF"] { background-color: #FFFFFF; }
+.color-button[data-color="#000000"] { background-color: #000000; }
+.color-button[data-color="#FF5733"] { background-color: #FF5733; }
+.color-button[data-color="#FFC300"] { background-color: #FFC300; }
+
+#fullscreen-button svg {
+    color: #000;
+}
