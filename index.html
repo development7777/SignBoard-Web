@@ -4,16 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SignBoard Web</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="SignBoard Web application">
     <link rel="icon" href="favicon.ico" sizes="32x32">
     <link rel="icon" href="icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="manifest" href="manifest.webmanifest">
+    <link rel="preload" href="style.min.css" as="style" media="all" onload="this.onload=null;this.rel='stylesheet'">
+    <style>
+        body {
+            background-color: #f0f2f5;
+        }
+    </style>
 </head>
 <body>
     <div class="text-container">
         <div class="textarea-wrapper">
-            <textarea name="sign-text" id="sign-text"></textarea>
+            <textarea name="sign-text" id="sign-text" aria-label="SignBoard Text"></textarea>
         </div>
     </div>
     
@@ -35,6 +41,6 @@
         </button>
     </div>
 
-    <script src="script.js"></script>
+    <script src="script.min.js"></script>
 </body>
 </html>
